@@ -33,4 +33,10 @@ class HomeController < ApplicationController
                                 #asc는 올바른 순서. 기본셋팅
   end
   
+  def destroy
+    @one_post = Post.find(params[:id_post])
+    @one_post.destroy
+    redirect_to "/list"
+    
+  end
 end

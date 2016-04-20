@@ -4,6 +4,7 @@
     제목 : <%= p.title %><br>  
     내용 : <%= p.content %><br>  
     시간 : <%= p.created_at %><br>  
+    <a href="/destroy/<%=p.id%>">[삭제]</a>
     <hr>
     <% end %>
     <h1><a href="/">글쓰러 가기</a></h1>
