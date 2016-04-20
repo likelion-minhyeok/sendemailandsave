@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>보낸 메일 게시판</h1>
+    <% @every_post.each do |p|%>
+    제목 : <%= p.title %><br>  
+    내용 : <%= p.content %><br>  
+    시간 : <%= p.created_at %><br>  
+    <hr>
+    <% end %>
+    <h1><a href="/">글쓰러 가기</a></h1>
+</div>
