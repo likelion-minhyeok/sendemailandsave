@@ -4,6 +4,7 @@
     제목 : <%= p.title %><br>  
     내용 : <%= p.content %><br>  
     시간 : <%= p.created_at %><br>  
+    <a href="/update_view/<%=p.id%>">[수정]</a>
     <a href="/destroy/<%=p.id%>">[삭제]</a>
     <hr>
     <% end %>

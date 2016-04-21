@@ -34,9 +34,33 @@ class HomeController < ApplicationController
   end
   
   def destroy
-    @one_post = Post.find(params[:id_post])
+    @one_post = Post.find(params[:post_id])
     @one_post.destroy
     redirect_to "/list"
-    
   end
+  
+  def update_view
+    @one_post = Post.find(params[:post_id])
+  end
+  
+  def realupdate
+    @one_post = Post.find(params[:post_id])
+    @one_post.content = params[:content]
+    @one_post.title = params[:title]
+    @one_post.save
+    redirect_to "/list"
+  end
+  
 end
+
+
+
+
+
+
+
+
+
+
+
+
